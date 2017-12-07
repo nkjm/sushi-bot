@@ -2,6 +2,7 @@
 // モジュールのインポート
 const server = require("express")();
 const line = require("@line/bot-sdk"); // Messaging APIのSDKをインポート
+const dialogflow = require("apiai-promisified");
 
 // -----------------------------------------------------------------------------
 // パラメータ設定
@@ -17,6 +18,9 @@ server.listen(process.env.PORT || 3000);
 // APIコールのためのクライアントインスタンスを作成
 const bot = new line.Client(line_config);
 
+// Dialogflowのクライアントインスタンスを作成
+const nlu = new dialogflow(process.env.DIALOGFLOW_CLIENT_ACCESS_TOKEN, {language: "ja"});
+
 // -----------------------------------------------------------------------------
 // ルーター設定
 server.post('/webhook', line.middleware(line_config), (req, res, next) => {
@@ -30,14 +34,25 @@ server.post('/webhook', line.middleware(line_config), (req, res, next) => {
     req.body.events.map((event) => {
         // この処理の対象をイベントタイプがメッセージで、かつ、テキストタイプだった場合に限定。
         if (event.type == "message" && event.message.type == "text"){
-            // ユーザーからのテキストメッセージが「こんにちは」だった場合のみ反応。
-            if (event.message.text == "こんにちは"){
-                // replyMessage()で返信し、そのプロミスをevents_processedに追加。
-                events_processed.push(bot.replyMessage(event.replyToken, {
-                    type: "text",
-                    text: "これはこれは"
-                }));
-            }
+            events_processed.push(
+                nlu.textRequest(event.message.text, {sessionId: event.source.userId}).then((response) => {
+                    if (response.result && response.result.action == "handle-delivery-order"){
+                        let message;
+                        if (response.result.parameters.menu && response.result.parameters.menu != ""){
+                            message = {
+                                type: "text",
+                                text: `毎度！${response.result.parameters.menu}ね。どちらにお届けしましょ？`
+                            }
+                        } else {
+                            message = {
+                                type: "text",
+                                text: `毎度！ご注文は？`
+                            }
+                        }
+                        return bot.replyMessage(event.replyToken, message);
+                    }
+                })
+            );
         }
     });
 
