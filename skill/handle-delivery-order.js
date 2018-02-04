@@ -55,7 +55,7 @@ module.exports = class SkillHandleDeliveryOrder {
     finish(bot, event, context, resolve, reject){
         return bot.reply({
             type: "text",
-            text: `あいよっ。じゃあ${context.confirmed.menu}を30分後くらいに${context.confirmed.address}にお届けしますわ。お代金は800円になりますー。`
+            text: `あいよっ！じゃあ${context.confirmed.menu}を30分後くらいに${context.confirmed.address}にお届けしますわ。お代金は800円になりますー。`
         }).then((response) => {
             return line_event.fire({
                 type: "bot-express:push",

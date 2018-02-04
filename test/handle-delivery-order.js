@@ -46,7 +46,7 @@ for (let messenger_option of messenger_options){
                     let event = emu.create_message_event(user_id, "東京都港区南青山1-1-1");
                     return emu.send(event);
                 }).then(function(context){
-                    context.previous.message[0].message.text.should.equal("あいよっ。じゃあ松を30分後くらいに東京都港区南青山1-1-1にお届けしますわ。お代金は800円になりますー。")
+                    context.previous.message[0].message.text.should.equal("あいよっ！じゃあ松を30分後くらいに東京都港区南青山1-1-1にお届けしますわ。お代金は800円になりますー。")
                 });
             });
         });

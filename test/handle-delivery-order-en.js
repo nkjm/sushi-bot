@@ -46,7 +46,7 @@ for (let messenger_option of messenger_options){
                     let event = emu.create_message_event(user_id, "1-1-1, Minami Aoyama, Minatoku, Tokyo");
                     return emu.send(event);
                 }).then(function(context){
-                    context.previous.message[0].message.text.should.equal("I love you. Then I will deliver the pine to 1-1-1, Minami Aoyama, Minatoku, Tokyo in about 30 minutes. The price will be 800 yen.")
+                    context.previous.message[0].message.text.should.equal("Aiyo! Then I will deliver the pine to 1-1-1, Minami Aoyama, Minatoku, Tokyo in about 30 minutes. The price will be 800 yen.")
                 });
             });
         });
