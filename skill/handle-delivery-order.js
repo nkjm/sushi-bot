@@ -37,7 +37,7 @@ module.exports = class SkillHandleDeliveryOrder {
             address: {
                 message_to_confirm: {
                     type: "text",
-                    text: "どちらにお届けしましょっ？"
+                    text: "配達先を教えてもらえまっか？"
                 },
                 parser: (value, bot, event, context, resolve, reject) => {
                     if (typeof value == "string"){
@@ -55,7 +55,7 @@ module.exports = class SkillHandleDeliveryOrder {
     finish(bot, event, context, resolve, reject){
         return bot.reply({
             type: "text",
-            text: `あいよっ。じゃあ${context.confirmed.menu}を30分後くらいに${context.confirmed.address}にお届けしますわ。おおきに。`
+            text: `あいよっ。じゃあ${context.confirmed.menu}を30分後くらいに${context.confirmed.address}にお届けしますわ。`
         }).then((response) => {
             return resolve(response);
         });
