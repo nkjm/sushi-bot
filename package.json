@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --exit"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,14 @@
     "@line/bot-sdk": "^5.1.0",
     "apiai-promisified": "^1.0.1",
     "bot-express": "^0.1.16",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "line-pay": "^1.0.11",
+    "mecabaas-client": "^1.0.3",
+    "memory-cache": "^0.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.0.0"
   }
 }

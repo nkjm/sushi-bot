@@ -40,4 +40,7 @@ server.use("/webhook", bot_express({
     auto_translation: process.env.AUTO_TRANSLATION
 }));
 
+const routes_pay = require("./routes/pay");
+server.use("/pay", routes_pay);
+
 module.exports = server;
