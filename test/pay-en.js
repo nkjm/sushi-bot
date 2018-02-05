@@ -53,7 +53,7 @@ for (let messenger_option of messenger_options){
                     context.previous.message[0].message.template.text.should.equal("Please proceed to settlement from the button below.");
                     context.previous.message[0].message.template.actions.should.lengthOf(1);
                     context.previous.message[0].message.template.actions[0].type.should.equal("uri");
-                    context.previous.message[0].message.template.actions[0].label.should.equal("Settle 800 yen");
+                    context.previous.message[0].message.template.actions[0].label.should.equal("I will pay 800 yen");
                     context.previous.message[0].message.template.actions[0].uri.should.match(/^https:\/\/sandbox-web-pay\.line\.me\/web\/payment\/wait\?transactionReserveId/);
                 });
             });

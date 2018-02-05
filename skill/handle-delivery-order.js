@@ -50,6 +50,8 @@ module.exports = class SkillHandleDeliveryOrder {
                 }
             }
         }
+
+        this.clear_context_on_finish = (process.env.BOT_EXPRESS_ENV === "test") ? false : true;
     }
 
     finish(bot, event, context, resolve, reject){
