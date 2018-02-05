@@ -6,9 +6,11 @@ const debug = require("debug")("bot-express:skill");
 ** Just reply the text response provided from NLU.
 */
 module.exports = class SkillSimpleResponse {
+    constructor(){
+        this.clear_context_on_finish = true;
+    }
+    
     finish(bot, event, context, resolve, reject){
-        debug("We could not identify intent so use builtin-default skill which uses fulfillment of the intent response as message.");
-
         let message;
         if (context.intent.fulfillment && context.intent.fulfillment.messages && context.intent.fulfillment.messages.length > 0){
             let offset = Math.floor(Math.random() * (context.intent.fulfillment.messages.length));
