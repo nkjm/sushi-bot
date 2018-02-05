@@ -59,7 +59,7 @@ router.get('/confirm', (req, res, next) => {
                 fulfillment: {
                     messages: [{
                         type: 0,
-                        speech: `決済が完了しました。`
+                        speech: `お支払いが完了しました。`
                     }]
                 }
             },

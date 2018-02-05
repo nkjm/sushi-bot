@@ -56,7 +56,7 @@ module.exports = class SkillPay {
                     type: "buttons",
                     text: context.confirmed.message_text,
                     actions: [
-                        {type: "uri", label: `${reservation.amount}円を決済する`, uri: response.info.paymentUrl.web}
+                        {type: "uri", label: `${reservation.amount}円を支払う`, uri: response.info.paymentUrl.web}
                     ]
                 }
             });
