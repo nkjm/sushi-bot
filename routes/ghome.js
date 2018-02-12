@@ -6,7 +6,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require("body-parser");
 
-router.use(body_parser.json());
+router.use(bodyParser.json());
 
 const debug = require("debug")("bot-express:route");
 const line_event = require("../service/line-event");
