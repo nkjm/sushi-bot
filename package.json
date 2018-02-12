@@ -1,7 +1,8 @@
 {
   "name": "sushi-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A sample chatbot which can handle sushi delivery order.",
+  "repository": "https://github.com/nkjm/sushi-bot",
   "main": "index.js",
   "scripts": {
     "test": "mocha --exit"
@@ -11,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@line/bot-sdk": "^5.1.0",
+    "actions-on-google": "^1.8.2",
     "apiai-promisified": "^1.0.1",
     "bot-express": "^0.1.16",
     "express": "^4.16.2",

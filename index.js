@@ -43,4 +43,7 @@ server.use("/webhook", bot_express({
 const routes_pay = require("./routes/pay");
 server.use("/pay", routes_pay);
 
+const routes_ghome = require("./routes/ghome");
+server.use("/ghome", routes_ghome);
+
 module.exports = server;
