@@ -1,21 +1,19 @@
 {
-  "actions": [
-    {
-      "description": "Default Intent",
-      "name": "MAIN",
-      "fulfillment": {
-        "conversationName": "sushi-bot"
-      },
-      "intent": {
-        "name": "actions.intent.MAIN"
-      }
-    }
-  ],
-  "conversations": {
-    "sushi-bot": {
-      "name": "sushi-bot",
-      "url": "https://bootcamp-sushi-bot.herokuapp.com/ghome"
-    }
-  },
-  "locale": "ja"
+    "actions": [{
+        "description": "Default Intent",
+        "name": "MAIN",
+        "fulfillment": {
+            "conversationName": "sushi-bot"
+        },
+        "intent": {
+            "name": "actions.intent.MAIN"
+        }
+    }],
+    "conversations": {
+        "sushi-bot": {
+            "name": "sushi-bot",
+            "url": "https://bootcamp-sushi-bot.herokuapp.com/ghome"
+        }
+    },
+    "locale": "ja"
 }
