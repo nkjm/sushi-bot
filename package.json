@@ -14,6 +14,7 @@
     "@line/bot-sdk": "^5.1.0",
     "actions-on-google": "^1.8.2",
     "apiai-promisified": "^1.0.1",
+    "body-parser": "^1.18.2",
     "bot-express": "^0.1.16",
     "express": "^4.16.2",
     "line-pay": "^1.0.11",
