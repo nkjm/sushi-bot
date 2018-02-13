@@ -18,12 +18,7 @@ router.post('/', (req, res, next) => {
         request: req,
         response: res
     });
-    app.ask("こんにちは。ご用は？");
-    //app.handleRequest(mainIntent);
+    app.tell("こんにちは。ご用は？");
 });
-
-function mainIntent(app){
-    app.tell("いろは");
-}
 
 module.exports = router;
