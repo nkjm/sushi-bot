@@ -18,7 +18,8 @@ router.post('/', (req, res, next) => {
         request: req,
         response: res
     });
-    app.handleRequest(mainIntent);
+    app.ask("こんにちは。ご用は？");
+    //app.handleRequest(mainIntent);
 });
 
 function mainIntent(app){
