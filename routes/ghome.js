@@ -13,6 +13,7 @@ const line_event = require("../service/line-event");
 const { ActionsSdkApp } = require('actions-on-google');
 
 router.post('/', (req, res, next) => {
+    debug(req.body);
     const app = new ActionsSdkApp({
         request: req,
         response: res
