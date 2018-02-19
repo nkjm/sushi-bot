@@ -5,6 +5,7 @@
   "repository": "https://github.com/nkjm/sushi-bot",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha --exit"
   },
   "keywords": [],
@@ -15,7 +16,7 @@
     "actions-on-google": "^1.8.2",
     "apiai-promisified": "^1.0.1",
     "body-parser": "^1.18.2",
-    "bot-express": "^0.1.22",
+    "bot-express": "^0.2.15",
     "express": "^4.16.2",
     "line-pay": "^1.0.11",
     "mecabaas-client": "^1.0.3",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
+    "dotenv": "^5.0.0",
     "mocha": "^5.0.0"
   }
 }

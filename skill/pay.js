@@ -1,7 +1,5 @@
 "use strict";
 
-require("dotenv").config();
-
 const debug = require('debug')('bot-express:skill');
 const cache = require("memory-cache");
 const Pay = require("line-pay");

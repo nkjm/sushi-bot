@@ -1,7 +1,5 @@
 "use strict";
 
-require("dotenv").config();
-
 const express = require('express');
 const router = express.Router();
 const request = require("request");
@@ -9,8 +7,6 @@ const debug = require("debug")("bot-express:route");
 const Pay = require("line-pay");
 const cache = require("memory-cache");
 const line_event = require("../service/line-event");
-
-Promise = require("bluebird");
 Promise.promisifyAll(request);
 
 const pay = new Pay({

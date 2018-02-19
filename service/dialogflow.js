@@ -5,8 +5,6 @@ const debug = require("debug")("bot-express:service");
 const URL_BASE = `https://api.dialogflow.com/v1`;
 const DIALOGFLOW_DEVELOPER_ACCESS_TOKEN = process.env.DIALOGFLOW_DEVELOPER_ACCESS_TOKEN;
 const DIALOGFLOW_CLIENT_ACCESS_TOKEN = process.env.DIALOGFLOW_CLIENT_ACCESS_TOKEN;
-
-Promise = require('bluebird');
 Promise.promisifyAll(request);
 
 module.exports = class ServiceDialogflow {

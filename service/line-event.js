@@ -1,11 +1,8 @@
 "use strict";
 
-require("dotenv").config();
-
 const debug = require("debug")("bot-express:service");
 const crypto = require("crypto");
 const request = require("request");
-Promise = require("bluebird");
 Promise.promisifyAll(request);
 
 module.exports = class LineEvent {
