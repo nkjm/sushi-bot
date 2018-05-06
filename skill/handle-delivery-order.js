@@ -1,7 +1,6 @@
 "use strict";
 
 const line_event = require("../service/line-event");
-const parse = require("../service/parser");
 
 module.exports = class SkillHandleDeliveryOrder {
 
@@ -21,9 +20,7 @@ module.exports = class SkillHandleDeliveryOrder {
                         ]
                     }
                 },
-                parser: (value, bot, event, context, resolve, reject) => {
-                    return parse.by_nlu_with_list(context.sender_language, "menu", value, ["松", "竹", "梅"], resolve, reject);
-                },
+                parser: "dialogflow",
                 reaction: (error, value, bot, event, context, resolve, reject) => {
                     if (error) return resolve();
 

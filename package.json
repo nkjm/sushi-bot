@@ -9,11 +9,11 @@
     "test": "mocha --exit"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Kazuki Nakajima",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "bot-express": "^0.2.15",
+    "bot-express": "^0.3.1",
     "express": "^4.16.2",
     "line-pay": "^1.0.11",
     "mecabaas-client": "^1.0.3",
