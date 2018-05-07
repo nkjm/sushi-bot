@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "bot-express": "^0.3.1",
+    "bot-express": "^0.3.3",
     "express": "^4.16.2",
     "line-pay": "^1.0.11",
     "mecabaas-client": "^1.0.3",
